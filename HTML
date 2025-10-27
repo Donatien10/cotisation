@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau de Cotisation - Octobre</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fa;
+    margin: 40px;
+  }
+
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #007BFF;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  td {
+    font-size: 15px;
+    color: #333;
+  }
+
+  .nom {
+    font-weight: bold;
+    color: #007BFF;
+  }
+
+  .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3px;
+  }
+
+  .checkboxes input[type="checkbox"] {
+    accent-color: #007BFF;
+    transform: scale(1.2);
+  }
+
+  .checkboxes label {
+    font-size: 12px;
+  }
+
+  .checkbox-cell {
+    min-width: 200px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Tableau de Cotisation - Octobre</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Montant par jour</th>
+      <th>Nombre total de jours</th>
+      <th>Total à payer</th>
+      <th>Montant payé</th>
+      <th>Montant restant dû</th>
+      <th>Jours déjà payés</th>
+      <th>Jours restants</th>
+      <th>Suivi (cases à cocher)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="nom">Donatien Kouakou</td>
+      <td>500 F</td>
+      <td>31</td>
+      <td>15 500 F</td>
+      <td>12 500 F</td>
+      <td><strong>3 000 F</strong></td>
+      <td>25</td>
+      <td>6</td>
+      <td class="checkbox-cell">
+        <div class="checkboxes">
+          <!-- 31 cases pour chaque jour -->
+          <script>
+            for(let i=1; i<=31; i++){
+              document.write('<input type="checkbox" id="d'+i+'"><label for="d'+i+'">'+i+'</label>');
+            }
+          </script>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="nom">Kouassi Ahou Charlène</td>
+      <td>500 F</td>
+      <td>31</td>
+      <td>15 500 F</td>
+      <td>8 500 F</td>
+      <td><strong>7 000 F</strong></td>
+      <td>17</td>
+      <td>14</td>
+      <td class="checkbox-cell">
+        <div class="checkboxes">
+          <!-- 31 cases pour chaque jour -->
+          <script>
+            for(let i=1; i<=31; i++){
+              document.write('<input type="checkbox" id="c'+i+'"><label for="c'+i+'">'+i+'</label>');
+            }
+          </script>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
